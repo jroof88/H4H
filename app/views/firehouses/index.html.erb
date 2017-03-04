@@ -1,0 +1,46 @@
+<body>
+<p id="notice"><%= notice %></p>
+
+<h1>Firehouses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Summary</th>
+      <th>Photo</th>
+      <th>Story</th>
+      <th>Goalamount</th>
+      <th>Donationdest</th>
+      <th>Locationcounty</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @firehouses.each do |firehouse| %>
+      <tr>
+        <td><%= firehouse.name %></td>
+        <td><%= firehouse.age %></td>
+        <td><%= firehouse.summary %></td>
+        <td><%= firehouse.photo %></td>
+        <td><%= firehouse.story %></td>
+        <td><%= firehouse.goalAmount %></td>
+        <td><%= firehouse.donationDest %></td>
+        <td><%= firehouse.locationCounty %></td>
+        <td><%= link_to 'Show', firehouse %></td>
+        <td><%= link_to 'Edit', edit_firehouse_path(firehouse) %></td>
+        <td><%= link_to 'Destroy', firehouse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Firehouse', new_firehouse_path %>
+
+<%= render "layouts/footer"%>
+<% yield %>
+</body>

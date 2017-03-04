@@ -1,0 +1,60 @@
+<body>
+<%= form_for(firehouse) do |f| %>
+  <% if firehouse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(firehouse.errors.count, "error") %> prohibited this firehouse from being saved:</h2>
+
+      <ul>
+      <% firehouse.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :summary %>
+    <%= f.text_field :summary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :photo %>
+    <%= f.text_field :photo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :story %>
+    <%= f.text_field :story %>
+  </div>
+
+  <div class="field">
+    <%= f.label :goalAmount %>
+    <%= f.text_field :goalAmount %>
+  </div>
+
+  <div class="field">
+    <%= f.label :donationDest %>
+    <%= f.text_field :donationDest %>
+  </div>
+
+  <div class="field">
+    <%= f.label :locationCounty %>
+    <%= f.text_field :locationCounty %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<%= render "layouts/footer"%>
+<% yield %>
+</body>

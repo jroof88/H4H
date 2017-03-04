@@ -1,0 +1,49 @@
+<body>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @firehouse.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @firehouse.age %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @firehouse.summary %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @firehouse.photo %>
+</p>
+
+<p>
+  <strong>Story:</strong>
+  <%= @firehouse.story %>
+</p>
+
+<p>
+  <strong>Goalamount:</strong>
+  <%= @firehouse.goalAmount %>
+</p>
+
+<p>
+  <strong>Donationdest:</strong>
+  <%= @firehouse.donationDest %>
+</p>
+
+<p>
+  <strong>Locationcounty:</strong>
+  <%= @firehouse.locationCounty %>
+</p>
+
+<%= link_to 'Edit', edit_firehouse_path(@firehouse) %> |
+<%= link_to 'Back', firehouses_path %>
+
+<%= render "layouts/footer"%>
+<% yield %>
+</body>

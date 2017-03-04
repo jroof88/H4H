@@ -1,0 +1,2 @@
+module FirehousesHelper
+end

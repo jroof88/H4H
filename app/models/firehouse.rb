@@ -1,0 +1,2 @@
+class Firehouse < ApplicationRecord
+end

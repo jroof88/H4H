@@ -1,0 +1,12 @@
+<body>
+<h1>Editing Firehouse</h1>
+
+<%= render 'form', firehouse: @firehouse %>
+
+<%= link_to 'Show', @firehouse %> |
+<%= link_to 'Back', firehouses_path %>
+
+<%= render "layouts/footer"%>
+<% yield %>
+
+</body>
