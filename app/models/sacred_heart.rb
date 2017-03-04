@@ -1,0 +1,2 @@
+class SacredHeart < ApplicationRecord
+end

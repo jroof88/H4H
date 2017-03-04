@@ -1,0 +1,13 @@
+<body>
+<%= render "layouts/navbar" %>
+
+
+<h1>New Catholic Charity</h1>
+
+<%= render 'form', catholic_charity: @catholic_charity %>
+
+<%= link_to 'Back', catholic_charities_path %>
+
+<%= render "layouts/footer" %>
+<% yield %>
+</body>

@@ -1,5 +1,11 @@
 <body>
+<%= render "layouts/navbar" %>
 <h1>Page with different charities</h1>
 <p>Find me in app/views/home/home.html.erb</p>
+<h2><a href="/firehouses">Click here to donate to members of the Firehouse San Jose</a></h2>
+<h2><a href="/sacred_hearts">Click here to donate to members of the Sacred Heart Community Service</a></h2>
+<h2><a href="/catholic_charities">Click here to donate to members of Catholic Charities</a></h2>
+
+<%= render "layouts/footer" %>
 <%= yield %>
 </body>

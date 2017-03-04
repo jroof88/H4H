@@ -1,0 +1,2 @@
+module SacredHeartsHelper
+end

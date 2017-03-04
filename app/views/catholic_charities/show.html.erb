@@ -1,0 +1,52 @@
+<body>
+<%= render "layouts/navbar" %>
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @catholic_charity.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @catholic_charity.age %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @catholic_charity.summary %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @catholic_charity.photo %>
+</p>
+
+<p>
+  <strong>Story:</strong>
+  <%= @catholic_charity.story %>
+</p>
+
+<p>
+  <strong>Goalamount:</strong>
+  <%= @catholic_charity.goalAmount %>
+</p>
+
+<p>
+  <strong>Donationdest:</strong>
+  <%= @catholic_charity.donationDest %>
+</p>
+
+<p>
+  <strong>Locationcounty:</strong>
+  <%= @catholic_charity.locationCounty %>
+</p>
+
+<%= link_to 'Edit', edit_catholic_charity_path(@catholic_charity) %> |
+<%= link_to 'Back', catholic_charities_path %>
+
+<%= render "layouts/footer" %>
+<% yield %>
+</body>

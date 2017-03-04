@@ -1,0 +1,14 @@
+<body>
+<%= render "layouts/navbar" %>
+
+
+<h1>Editing Sacred Heart</h1>
+
+<%= render 'form', sacred_heart: @sacred_heart %>
+
+<%= link_to 'Show', @sacred_heart %> |
+<%= link_to 'Back', sacred_hearts_path %>
+
+<%= render "layouts/footer"%>
+<%= yield %>
+</body>

@@ -1,0 +1,49 @@
+<body>
+<%= render "layouts/navbar" %>
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Sacred Hearts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Summary</th>
+      <th>Photo</th>
+      <th>Story</th>
+      <th>Goalamount</th>
+      <th>Donationdest</th>
+      <th>Locationcounty</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sacred_hearts.each do |sacred_heart| %>
+      <tr>
+        <td><%= sacred_heart.name %></td>
+        <td><%= sacred_heart.age %></td>
+        <td><%= sacred_heart.summary %></td>
+        <td><%= sacred_heart.photo %></td>
+        <td><%= sacred_heart.story %></td>
+        <td><%= sacred_heart.goalAmount %></td>
+        <td><%= sacred_heart.donationDest %></td>
+        <td><%= sacred_heart.locationCounty %></td>
+        <td><%= link_to 'Show', sacred_heart %></td>
+        <td><%= link_to 'Edit', edit_sacred_heart_path(sacred_heart) %></td>
+        <td><%= link_to 'Destroy', sacred_heart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sacred Heart', new_sacred_heart_path %>
+
+<%= render "layouts/footer"%>
+<%= yield %>
+</body>

@@ -10,9 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170304200334) do
+ActiveRecord::Schema.define(version: 20170304215209) do
+
+  create_table "catholic_charities", force: :cascade do |t|
+    t.string   "name"
+    t.string   "age"
+    t.string   "summary"
+    t.string   "photo"
+    t.string   "story"
+    t.string   "goalAmount"
+    t.string   "donationDest"
+    t.string   "locationCounty"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "firehouses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "age"
+    t.string   "summary"
+    t.string   "photo"
+    t.string   "story"
+    t.string   "goalAmount"
+    t.string   "donationDest"
+    t.string   "locationCounty"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "sacred_hearts", force: :cascade do |t|
     t.string   "name"
     t.string   "age"
     t.string   "summary"

@@ -1,10 +1,10 @@
-<%= form_for(firehouse) do |f| %>
-  <% if firehouse.errors.any? %>
+<%= form_for(sacred_heart) do |f| %>
+  <% if sacred_heart.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(firehouse.errors.count, "error") %> prohibited this firehouse from being saved:</h2>
+      <h2><%= pluralize(sacred_heart.errors.count, "error") %> prohibited this sacred_heart from being saved:</h2>
 
       <ul>
-      <% firehouse.errors.full_messages.each do |message| %>
+      <% sacred_heart.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
