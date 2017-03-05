@@ -5,43 +5,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name: </strong>
-  <%= @catholic_charity.name %>
-</p>
-
-<p>
-  <strong>Age: </strong>
-  <%= @catholic_charity.age %>
-</p>
-
-<p>
-  <strong>Summary: </strong>
-  <%= @catholic_charity.summary %>
-</p>
-
-<p>
-  <strong>Photo: </strong>
   <%= image_tag(@catholic_charity.photo) %>
 </p>
 
-<p>
-  <strong>Story: </strong>
-  <%= @catholic_charity.story %>
-</p>
-
-<p>
-  <strong>Total Goal Amount: </strong>
-  <%= @catholic_charity.goalAmount %>
-</p>
-
-<p>
-  <strong>Donation Destination: </strong>
-  <%= @catholic_charity.donationDest %>
-</p>
-
-<p>
-  <strong>Location: </strong>
-  <%= @catholic_charity.locationCounty %>
+<p style="font-size: 30px;font-family: 'Lobster', cursive;">
+  <%= @catholic_charity.name %> -- <%= @catholic_charity.age %>
 </p>
 
 <div class="row">
@@ -50,6 +18,41 @@
     <%= link_to 'Back', catholic_charities_path %>
   </div>
 </div>
+
+<br>
+
+<p>
+  <strong>Summary: </strong>
+  <%= @catholic_charity.summary %>
+</p>
+
+<br>
+
+<p>
+  <strong>Story: </strong>
+  <%= @catholic_charity.story %>
+</p>
+
+<br>
+
+<p>
+  <strong>Donation Destination: </strong>
+  <%= @catholic_charity.donationDest %>
+</p>
+
+<br>
+
+<p>
+  <strong>Location: </strong>
+  <%= @catholic_charity.locationCounty %>
+</p>
+
+<br>
+
+<p style="font-size: 20px;color:green;">
+  <strong>Total Goal Amount: </strong>
+  <%= @catholic_charity.goalAmount %>
+</p>
 
 <br>
 
