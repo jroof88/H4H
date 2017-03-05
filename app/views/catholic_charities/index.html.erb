@@ -5,45 +5,29 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Catholic Charities</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Summary</th>
-      <th>Photo</th>
-      <th>Story</th>
-      <th>Goalamount</th>
-      <th>Donationdest</th>
-      <th>Locationcounty</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<p> <%= link_to 'New Entry', new_catholic_charity_path %> </p>
+<br>
     <% @catholic_charities.each do |catholic_charity| %>
-      <tr>
-        <td><%= catholic_charity.name %></td>
-        <td><%= catholic_charity.age %></td>
-        <td><%= catholic_charity.summary %></td>
-        <td><%= catholic_charity.photo %></td>
-        <td><%= catholic_charity.story %></td>
-        <td><%= catholic_charity.goalAmount %></td>
-        <td><%= catholic_charity.donationDest %></td>
-        <td><%= catholic_charity.locationCounty %></td>
-        <td><%= link_to 'Show', catholic_charity %></td>
-        <td><%= link_to 'Edit', edit_catholic_charity_path(catholic_charity) %></td>
-        <td><%= link_to 'Destroy', catholic_charity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="row">
+          <div class="col-md-2 col-md-offset-1">
+            <%= image_tag(catholic_charity.photo) %>
+            <br />
+            <p><i><strong> Name: </strong></i><%= catholic_charity.name %> </p>
+            <p><i><strong> Age: </strong></i><%= catholic_charity.age %> </p>
+            <br />
+          </div>
+          <div class="col-md-6">
+            <%= catholic_charity.summary %>
+          </div>
+          <div class="col-md-2">
+            <td><%= link_to 'Learn More', catholic_charity %></td>
+            <td><%= link_to 'Edit', edit_catholic_charity_path(catholic_charity) %></td>
+            <td><%= link_to 'Delete', catholic_charity, method: :delete, data: { confirm: 'Are you sure you wish to delete this entry?' } %></td>
+          </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
 <br>
 
-<%= link_to 'New Catholic Charity', new_catholic_charity_path %>
-
-<%= render "layouts/footer" %>
-<% yield %>
+<%= render "layouts/footer"%>
+<%= yield %>
 </body>

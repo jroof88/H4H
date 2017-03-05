@@ -4,45 +4,29 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Sacred Hearts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Summary</th>
-      <th>Photo</th>
-      <th>Story</th>
-      <th>Goalamount</th>
-      <th>Donationdest</th>
-      <th>Locationcounty</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @sacred_hearts.each do |sacred_heart| %>
-      <tr>
-        <td><%= sacred_heart.name %></td>
-        <td><%= sacred_heart.age %></td>
-        <td><%= sacred_heart.summary %></td>
-        <td><%= sacred_heart.photo %></td>
-        <td><%= sacred_heart.story %></td>
-        <td><%= sacred_heart.goalAmount %></td>
-        <td><%= sacred_heart.donationDest %></td>
-        <td><%= sacred_heart.locationCounty %></td>
-        <td><%= link_to 'Show', sacred_heart %></td>
-        <td><%= link_to 'Edit', edit_sacred_heart_path(sacred_heart) %></td>
-        <td><%= link_to 'Destroy', sacred_heart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<h1>Sacred Heart Community Service</h1>
+<p> <%= link_to 'New Entry', new_sacred_heart_path %> </p>
 <br>
-
-<%= link_to 'New Sacred Heart', new_sacred_heart_path %>
+    <% @sacred_hearts.each do |sacred_heart| %>
+      <div class="row">
+          <div class="col-md-2 col-md-offset-1">
+            <%= image_tag(sacred_heart.photo) %>
+            <br />
+            <p><i><strong> Name: </strong></i><%= sacred_heart.name %> </p>
+            <p><i><strong> Age: </strong></i><%= sacred_heart.age %> </p>
+            <br />
+          </div>
+          <div class="col-md-6">
+            <%= sacred_heart.summary %>
+          </div>
+          <div class="col-md-2">
+            <td><%= link_to 'Learn More', sacred_heart %></td>
+            <td><%= link_to 'Edit', edit_sacred_heart_path(sacred_heart) %></td>
+            <td><%= link_to 'Delete', sacred_heart, method: :delete, data: { confirm: 'Are you sure you wish to delete this entry?' } %></td>
+          </div>
+      </div>
+    <% end %>
+<br>
 
 <%= render "layouts/footer"%>
 <%= yield %>
