@@ -28,7 +28,7 @@ class SacredHeartsController < ApplicationController
 
     respond_to do |format|
       if @sacred_heart.save
-        format.html { redirect_to @sacred_heart, notice: 'Sacred heart was successfully created.' }
+        format.html { redirect_to @sacred_heart, notice: 'Sacred Heart Entry was successfully created.' }
         format.json { render :show, status: :created, location: @sacred_heart }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class SacredHeartsController < ApplicationController
   def update
     respond_to do |format|
       if @sacred_heart.update(sacred_heart_params)
-        format.html { redirect_to @sacred_heart, notice: 'Sacred heart was successfully updated.' }
+        format.html { redirect_to @sacred_heart, notice: 'Sacred Heart Entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @sacred_heart }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class SacredHeartsController < ApplicationController
   def destroy
     @sacred_heart.destroy
     respond_to do |format|
-      format.html { redirect_to sacred_hearts_url, notice: 'Sacred heart was successfully destroyed.' }
+      format.html { redirect_to sacred_hearts_url, notice: 'Sacred Heart Entry was successfully deleted.' }
       format.json { head :no_content }
     end
   end
