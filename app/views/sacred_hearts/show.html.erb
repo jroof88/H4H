@@ -21,7 +21,7 @@
 
 <p>
   <strong>Photo:</strong>
-  <%= @sacred_heart.photo %>
+  <%= image_tag(@sacred_heart.photo) %>
 </p>
 
 <p>
@@ -44,8 +44,20 @@
   <%= @sacred_heart.locationCounty %>
 </p>
 
-<%= link_to 'Edit', edit_sacred_heart_path(@sacred_heart) %> |
-<%= link_to 'Back', sacred_hearts_path %>
+<div class="row">
+  <div class="col-md-2 col-md-offset-5 text-center">
+    <%= link_to 'Edit', edit_sacred_heart_path(@sacred_heart) %> |
+    <%= link_to 'Back', sacred_hearts_path %>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="center-block">
+      <a href="https://www.paypal.com/us/home" target="_blank"><button type="button" class="btn btn-primary btn-lg">Lend <%= @sacred_heart.name %> a helping hand today!  <span class="glyphicon glyphicon-heart"></span></button></a>
+    </div>
+</div>
 
 <%= render "layouts/footer"%>
 <%= yield %>

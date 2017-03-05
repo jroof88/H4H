@@ -1,6 +1,6 @@
-<body>
 <%= render "layouts/navbar" %>
 
+<body style="font-family: 'Lato', sans-serif;">
 
 <p id="notice"><%= notice %></p>
 
@@ -20,8 +20,8 @@
             <%= catholic_charity.summary %>
           </div>
           <div class="col-md-2">
-            <td><%= link_to 'Learn More', catholic_charity %></td>
-            <td><%= link_to 'Edit', edit_catholic_charity_path(catholic_charity) %></td>
+            <td><%= link_to 'Learn More', catholic_charity %></td> |
+            <td><%= link_to 'Edit', edit_catholic_charity_path(catholic_charity) %></td> |
             <td><%= link_to 'Delete', catholic_charity, method: :delete, data: { confirm: 'Are you sure you wish to delete this entry?' } %></td>
           </div>
       </div>

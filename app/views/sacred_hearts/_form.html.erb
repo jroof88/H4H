@@ -1,3 +1,5 @@
+<body style="font-family: 'Lato', sans-serif;">
+
 <%= form_for(sacred_heart) do |f| %>
   <% if sacred_heart.errors.any? %>
     <div id="error_explanation">
@@ -39,7 +41,7 @@
     <div class="col-md-3 col-md-offset-1">
       <div class="field">
         <%= f.label :goalAmount %>
-        <%= f.text_field :goalAmount, placeholder: "Goal" %>
+        <%= f.text_field :goalAmount, placeholder: "Goal (in dollars)" %>
       </div>
     </div>
 
@@ -78,3 +80,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</body>

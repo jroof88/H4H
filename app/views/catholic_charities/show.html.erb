@@ -1,4 +1,4 @@
-<body>
+<body style="font-family: 'Lato', sans-serif;">
 <%= render "layouts/navbar" %>
 
 
@@ -21,7 +21,7 @@
 
 <p>
   <strong>Photo:</strong>
-  <%= @catholic_charity.photo %>
+  <%= image_tag(@catholic_charity.photo) %>
 </p>
 
 <p>
@@ -44,8 +44,20 @@
   <%= @catholic_charity.locationCounty %>
 </p>
 
-<%= link_to 'Edit', edit_catholic_charity_path(@catholic_charity) %> |
-<%= link_to 'Back', catholic_charities_path %>
+<div class="row">
+  <div class="col-md-2 col-md-offset-5 text-center">
+    <%= link_to 'Edit', edit_catholic_charity_path(@catholic_charity) %> |
+    <%= link_to 'Back', catholic_charities_path %>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="center-block">
+      <a href="https://www.paypal.com/us/home" target="_blank"><button type="button" class="btn btn-primary btn-lg">Lend <%= @catholic_charity.name %> a helping hand today!  <span class="glyphicon glyphicon-heart"></span></button></a>
+    </div>
+</div>
 
 <%= render "layouts/footer" %>
 <% yield %>
