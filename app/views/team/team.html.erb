@@ -1,7 +1,37 @@
-<body>
 <%= render "layouts/navbar" %>
-<h1>Team#team</h1>
-<p>Find me in app/views/team/team.html.erb</p>
+<head>
+  <title>Team</title>
+</head>
+
+<body style="font-family: 'Lato', sans-serif;">
+  <div id="team-container">
+    <h1 class="navbar-brand" style="color:grey;text-align:center;"> Our Team </h1>
+    <p style="color:grey;text-align:center;">Learn more about the developers behind this site</p>
+    </hr>
+    </br>
+    <div class="row">
+      <div class="col-md-3">
+          <h2 id="aleisha">Aleisha Nelson</h2>
+          <!-- <img src="#" alt="Aleisha's Pic" style="border-radius:25px;height:200px;width:200px;"> -->
+          <%= image_tag("AleishaNelson.jpeg", size: "200x200", style: "border-radius:100%") %>
+          <p> Senior Computer Science major and Communication minor at Santa Clara University.</p>
+        </div>
+
+      <div class="col-md-3">
+        <h2>Rafal Chowaniec</h2>
+        <!-- <img src="#" alt="Rafal's Pic" style="border-radius:25px;height:200px;width:200px;"> -->
+        <%= image_tag("RafalChowaniec.jpeg", size: "200x200", style: "border-radius:100%") %>
+        <p> Senior Economics and Math Double major and Computer Science minor student at Santa Clara University.</p>
+      </div>
+
+      <div class="col-md-3">
+        <h2 id="aleisha">John Roof</h2>
+        <!-- <img src="#" alt="Jack's Pic" style="border-radius:25px;height:200px;width:200px;"> -->
+        <%= image_tag("JawnRoof", size: "200x200", style: "border-radius:100%") %>
+        <p> Senior Computer Science major at Santa Clara University.</p>
+      </div>
+
+    </div>
+  </body>
 <%= render "layouts/footer"%>
 <%= yield %>
-</body>
