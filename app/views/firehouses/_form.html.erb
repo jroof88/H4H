@@ -10,46 +10,69 @@
       </ul>
     </div>
   <% end %>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name, placeholder: "Full Name" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <div class="col-md-3">
+      <div class="field">
+        <%= f.label :age %>
+        <%= f.text_field :age, placeholder: "Age (optional)" %>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="field">
+        <%= f.label :photo %>
+        <%= f.text_field :photo, placeholder: "Enter Photo URL" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :age %>
-    <%= f.text_field :age %>
+  <br />
+
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+      <div class="field">
+        <%= f.label :goalAmount %>
+        <%= f.text_field :goalAmount, placeholder: "Goal" %>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="field">
+        <%= f.label :donationDest %>
+        <%= f.text_field :donationDest, placeholder: "Money destination?" %>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="field">
+        <%= f.label :locationCounty %>
+        <%= f.text_field :locationCounty, placeholder: "County" %>
+      </div>
+    </div>
   </div>
+
+  <br />
 
   <div class="field">
     <%= f.label :summary %>
-    <%= f.text_field :summary %>
+    <%= f.text_area(:summary, :cols => 150, :rows => 2, placeholder: "2-3 sentences about person and/or program") %>
   </div>
 
-  <div class="field">
-    <%= f.label :photo %>
-    <%= f.text_field :photo %>
-  </div>
+  <br />
 
   <div class="field">
     <%= f.label :story %>
-    <%= f.text_field :story %>
+    <%= f.text_area(:story, :cols => 150, :rows => 10, placeholder: "1-2 short paragraphs detailing why the money is needed and how it will be used") %>
   </div>
 
-  <div class="field">
-    <%= f.label :goalAmount %>
-    <%= f.text_field :goalAmount %>
-  </div>
-
-  <div class="field">
-    <%= f.label :donationDest %>
-    <%= f.text_field :donationDest %>
-  </div>
-
-  <div class="field">
-    <%= f.label :locationCounty %>
-    <%= f.text_field :locationCounty %>
-  </div>
+  <br />
 
   <div class="actions">
     <%= f.submit %>
