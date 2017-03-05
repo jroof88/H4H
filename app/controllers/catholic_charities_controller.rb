@@ -28,7 +28,7 @@ class CatholicCharitiesController < ApplicationController
 
     respond_to do |format|
       if @catholic_charity.save
-        format.html { redirect_to @catholic_charity, notice: 'Catholic Charities entry was successfully created.' }
+        format.html { redirect_to @catholic_charity, notice: 'Sacred Heart Entry was successfully created.' }
         format.json { render :show, status: :created, location: @catholic_charity }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class CatholicCharitiesController < ApplicationController
   def update
     respond_to do |format|
       if @catholic_charity.update(catholic_charity_params)
-        format.html { redirect_to @catholic_charity, notice: 'Catholic Charities entry was successfully updated.' }
+        format.html { redirect_to @catholic_charity, notice: 'Sacred Heart Entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @catholic_charity }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class CatholicCharitiesController < ApplicationController
   def destroy
     @catholic_charity.destroy
     respond_to do |format|
-      format.html { redirect_to catholic_charities_url, notice: 'Catholic Charities entry was successfully deleted.' }
+      format.html { redirect_to catholic_charities_url, notice: 'Sacred Heart Entry was successfully deleted.' }
       format.json { head :no_content }
     end
   end
