@@ -2,8 +2,22 @@
 <%= render "layouts/navbar" %>
 <title>About</title>
 <body style="font-family: 'Lato', sans-serif;">
-<h1 style="text-align:center;font-size:75px;">About <span style="font-family: 'Lobster', cursive;font-size:75px;">Helping Hand</span>  <span class="glyphicon glyphicon-heart"></span></h1>
-
+  <h1 style="text-align:center;font-size:75px;">About <span style="font-family: 'Lobster', cursive;font-size:75px;">Helping Hand</span>  <span class="glyphicon glyphicon-heart"></span></h1>
+  <div class="row" style="margin:25px;padding:25px;" >
+    <div class="col-md-5 col-md-offset-1">
+      <h1 id="missionStatement" style="text-align:center;font-family: 'Lobster', cursive;">What We Do</h1>
+      <p style="color:grey;text-align:center;">Helping Hand allows donors to have an inside look at the charities, the people, and the programs they are supporting. Our web application lays out what your money will specifically go towards. Donors can surf around our repository of people and programs in need and help them reach their fundraising goals!</p>
+    </div>
+    <div class="col-med-1"></div>
+    <div class="col-md-5">
+      <h1 id="missionStatement" style="text-align:center;font-family: 'Lobster', cursive;">Our Goal</h1>
+      <p style="color:grey;text-align:center;">We noticed that when donating to a non-profit organization you often aren’t told where exactly your money is going. Is it going directly to the people in need? Is it paying people salaries at the organization? Is it helping them expand their infrastructure? The personal piece of a donation gets lost in the shuffle. Our goal is to create a user-friendly application that allows the relationship between charity and donor to be fully transparent.</p>
+    </div>
+  </div>
+  </hr>
+  </br>
+  </br>
+  </br>
 </body>
 <%= render "layouts/footer" %>
 <% yield %>
