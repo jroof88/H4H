@@ -1,5 +1,3 @@
-# Hack 4 Humanity 2017
-
-# John Roof & Aleisha Nelson --- 
-
-# Ruby on Rails
+# Helping Hand
+### Created by: [John Roof](https://github.com/jroof88) & [Aleisha Nelson](https://github.com/aleishanelson)
+#### Created during Santa Clara University's [Hack 4 Humanity](https://www.hackforhumanity.io)
